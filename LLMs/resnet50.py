@@ -3,7 +3,7 @@ import torch
 from datasets import load_dataset
 
 dataset = load_dataset("huggingface/cats-image")
-image = dataset["test"]["image"][0]
+image = dataset["test"]["image"][1]
 
 processor = AutoImageProcessor.from_pretrained("microsoft/resnet-50")
 model = ResNetForImageClassification.from_pretrained("microsoft/resnet-50")
